@@ -20,6 +20,7 @@ export function handleTransfer(event: TransferEvent): void {
   transfer.from = event.params.from.toHex();
   transfer.to = event.params.to.toHex();
   transfer.amount = event.params.amount;
+  transfer.txHash = event.transaction.hash.toHex();
   transfer.timestamp = event.block.timestamp;
   transfer.save();
 
